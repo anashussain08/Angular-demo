@@ -1,0 +1,24 @@
+{
+  "name": "search tweets",
+  "description": "searching through twitter search api",
+  "main": "",
+  "authors": [
+    "Syed Anas Hussain"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+   "install": {
+    "path": "client/libs"
+  },
+  "dependencies": {
+    "angular":"~1.3.2",
+    "angular-material": "^1.0.7",
+    "angular-socket-io": "^0.7.0",
+    "angular-ui-router": "ui-router#^0.2.18"
+  }
+}

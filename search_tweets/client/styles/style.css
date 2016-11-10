@@ -1,0 +1,26 @@
+#searchButton{
+    top:-15;
+}
+#searchBar{
+    padding: 0 !important;
+    width: 50%;
+    margin: 0 auto;
+}
+#searchContainer{
+/*right:140%*/
+    margin-top: 25px;
+}
+#tweets-card{
+    width:80%;
+    margin:0 auto;
+}
+#input-el{
+    background-color: gainsboro;
+    /*height: 15%;*/
+}
+#mdToolbar{
+    height: 70px;
+}
+#title-card-text{
+    background-color: palegoldenrod;
+}

@@ -1,0 +1,38 @@
+<div ng-if="vm.showLoader" layout="row" layout-sm="column" layout-align="space-around">
+      <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+</div>
+<md-card id="tweets-card" ng-if="vm.tweets.length">
+    <md-card-title>
+        <md-card-title-text layout="row" layout-align="center center">
+
+            <span class="md-headline">Tweets for the keyword: "{{vm.term}}"</span>
+        </md-card-title-text>
+    </md-card-title>
+    <md-card-content>
+           
+        <md-list>
+             <md-list-item class="md-2-line" ng-repeat="item in vm.tweets">
+                <img ng-src={{item.user.profile_image_url_https}} class="md-avatar" alt="pic" />
+                <div class="md-list-item-text">
+                    <h3 class='capitalize'>{{item.user.name}}</h3>
+                    <p> @+{{item.user.screen_name}}</p>
+                    <p>{{item.text}}</p>
+                </div>
+                <md-divider></md-divider>
+             </md-list-item>
+
+        </md-list>
+
+    </md-card-content>
+
+</md-card>
+
+<md-card ng-if="vm.showError">   
+    <md-card-title-text ng-if="vm.term.length" id="title-card-text" layout="row" layout-align="center center">
+            <span class="md-headline">Some error occurred while searching for the keyword: "{{vm.term}}"</span>
+    </md-card-title-text>
+    <md-card-title-text ng-if="!vm.term.length" id="title-card-text" layout="row" layout-align="center center">
+            <span class="md-headline">Some error occurred, Please try again.</span>
+    </md-card-title-text>
+</md-card>
+
